@@ -1,0 +1,11 @@
+h5 {
+   font-size: 18px!important;
+   color: blueviolet!important;
+   border: 2px solid;
+   padding: 5px 10px;
+   border-radius: 16px;
+}
+
+ul{
+    list-style: none;
+}
