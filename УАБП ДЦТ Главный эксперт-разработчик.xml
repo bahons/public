@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Жанар Есмаганбетова</Author>
+  <LastAuthor>Ауталипова Мира Сериковна</LastAuthor>
+  <Created>2016-05-18T09:54:07Z</Created>
+  <LastSaved>2025-07-31T12:35:44Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9600</WindowHeight>
+  <WindowWidth>24000</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:CharSet="204" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Times New Roman" x:CharSet="204" x:Family="Roman"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Times New Roman" x:CharSet="204" x:Family="Roman"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Times New Roman" x:CharSet="204" x:Family="Roman"
+    ss:Color="#000000"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Font ss:FontName="Times New Roman" x:CharSet="204" x:Family="Roman"
+    ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Times New Roman" x:CharSet="204" x:Family="Roman"
+    ss:Size="12" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Font ss:FontName="Times New Roman" x:CharSet="204" x:Family="Roman"
+    ss:Size="12" ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Лист1">
+  <Names>
+   <NamedRange ss:Name="_Toc436818979" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818981" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818982" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818983" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818985" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818989" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818990" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818991" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="_Toc436818992" ss:RefersTo="=Лист1!#REF!"/>
+   <NamedRange ss:Name="Print_Titles" ss:RefersTo="=Лист1!#REF!"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="161" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s62">
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="31.5"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="622.5"/>
+   <Row>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Тип</Data></Cell>
+    <Cell><Data ss:Type="String">Название</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Под объектами понимают</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Некоторую абстрактную сущность, заданную набором имен атрибутов и имен методов поведения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Всю абстрактную сущность, заданную набором имен атрибутов и имен методов поведения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Некоторую видимую сущность, заданную набором имен атрибутов и имен методов поведения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что такое SOLID?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Принципы объектно-ориентированного проектирования</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Язык запросов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Соглашение по логированию</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Изменение состояния объекта в ответ на какое-либо действие</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Событие</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Значение</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Данность</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">В чём преимущество CQRS?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Разделяет чтение и запись</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Используется для логирования</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ускоряет фронтенд</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Характеристика объекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Свойство</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Событие</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Данность</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Совокупность свойств и методов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Объект</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Свойство</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Событие</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Какой символ используется для комментариев в JavaScript?</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">//</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">&lt;!&#45;- &#45;-&gt;</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">#</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Компоненты, которые видны во время работы приложения, с ними напрямую может взаимодействовать пользователь, называются</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Визуальными</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Абстрактными</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Видимыми</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что такое абстрактный класс?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Это класс, объект которого не может быть создан. Такой класс должен иметь класс-наследник с реализацией абстрактных методов.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Это класс, у которого ни один метод не реализован, все они публичные и нет переменных класса</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Это класс, который наследует от интерфейса.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что такое SLA в BPM-системах?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Соглашение об уровне сервиса</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Форма отчёта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Формат API</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Сборка мусора – это?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> автоматическое удаление неиспользуемых объектов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> удаление методов класса сразу после их вызова</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> обязанность программиста периодически освобождать память, отводимую объектам</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Повторное использование</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> уменьшает время разработки</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> позволяет отказаться от обработки исключительных ситуаций</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> снижает надежность приложения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Обертывание – это?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> способ, при котором внешние (не объектные) программы заворачиваются в объектную упаковку, становясь частью классов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> преобразование нескольких классов в один новый класс</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> попытка представить старую систему как новую, вводя в заблуждение пользователя</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">При уничтожении объекта класса автоматически вызывается специальный метод класса:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Деструктор</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Конструктор</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Разрушитель</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Метод вызываемый автоматически при создании объекта класса называется:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Конструктор</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Деструктор</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Делегирование</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Преобразование исходного текста программы, написанного на языке программирования, в язык, близкий к машинному называется</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Компиляцией</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Генерацией</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Исполнением</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Как называется функция, которая вызывает саму себя?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Рекурсивной</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Конструктором</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Деструктором</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Выберите верное SQL  утверждение:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Приоритет AND выше, чем OR</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Приоритет AND и OR одинаковый</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Приоритет AND ниже, чем OR</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что делает индекс в базе данных?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Повышает скорость поиска</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Создаёт ключи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Обновляет таблицу</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Выберите верное утверждение в SQL относительно индекса</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Индекс позволяет ускорить выборку с тем полем, для которого он сделан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Индекс ускоряет добавление записей в таблицу</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Индекс позволяет сэкономить место, занимаемое таблицей</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Миссия Фонда:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд осуществляет свою деятельность строго в рамках, определенных законодательством Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Надежный учет пенсионных сбережений и оказание качественных пенсионных услуг, доступных каждому вкладчику</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Интересы клиентов ЕНПФ – самое важное, и Фонд делает все, чтобы его пенсионные услуги были доступны в любой точке РК, а также за рубежом, понятны и соответствовали ожиданиям потребителей</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Видение Фонда:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Высокотехнологичный финансовый институт с персонализированным подходом к формированию и планированию накопительной пенсии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Качественное оказание услуг в соответствии со стандартами лучших практик</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Развитие культуры планирования пенсионных накоплений населением Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что из перечисленного относится к стратегическим целям и задачам Фонда?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Соблюдение установленных стандартов качества и совершенствование процессов Фонда</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд нацелен на поддержание высоких стандартов корпоративного управления, регулярно публикует в открытых информационных источниках сведения о состоянии счетов вкладчиков и своем текущем финансовом состоянии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд осуществляет свою деятельность строго в рамках, определенных законодательством Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ценность ЕНПФ: Надежность -</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Обеспечение равного доступа к пенсионным услугам</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд нацелен на поддержание высоких стандартов корпоративного управления, осуществляет свою деятельность строго в рамках, определенных законодательством Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Повышение уровня финансово-правовой грамотности населения в сфере пенсионного обеспечения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ценность ЕНПФ: Прозрачность и открытость -</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд открыт для коммуникаций с общественностью, регулярно публикует в открытых информационных источниках сведения о состоянии пенсионных накоплений и своём текущем финансовом состоянии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Укрепление доверия населения к накопительной пенсионной системе через формирование позитивного образа ЕНПФ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Осуществление функций ЕНПФ в качестве Компетентного органа в рамках Договора о пенсионном обеспечении трудящихся государств-членов ЕАЭС</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ценность ЕНПФ: Человекоцентричность и ориентированность на потребителя -</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд видит в каждом прежде всего человека с присущей ему индивидуальностью. Интересы клиентов ЕНПФ — самое важное, и Фонд делает все, чтобы его пенсионные услуги были доступны, понятны, своевременны и соответствовали текущим и будущим потребностям клиентов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Укрепление доверия населения к накопительной пенсионной системе через формирование позитивного образа ЕНПФ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Переход на осуществление ежемесячных пенсионных выплат из ЕНПФ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ценность ЕНПФ: Технологичность -</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд применяет в своей деятельности современные технологии, чтобы быть готовыми к требованиям и вызовам времени</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Персонал Фонда постоянно изучает и внедряет  современные технологии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд применяет в своей деятельности современные технологии, персонал Фонда постоянно учится и применяет новые навыки и знания, чтобы быть готовыми к требованиям и вызовам времени</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ценность ЕНПФ: Ответственность -</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Руководство и работники ЕНПФ несут ответственность перед вкладчиками и получателями пенсионных накоплений за постоянное совершенствование деятельности Фонда, экономичное и рациональное использование ресурсов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Фонд осуществляет свою деятельность строго в рамках, определенных законодательством Республики Казахстан Укрепление доверия населения к накопительной пенсионной системе через формирование позитивного образа ЕНПФ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">ЕНПФ, как социально ответственная организация: эффективно, своевременно и в максимально полном объеме оказывает услуги вкладчикам и получателям пенсионных накоплений</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">В каких видах может быть пользовательская документация?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Оба варианта верны</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Только в виде текстовой информации</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Только в виде видео демонстраций</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Изменения в пользовательскую документацию согласовываются</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Со всеми заинтересованными сторонами</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Внутри подразделения информационных технологий</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Со всеми участниками рабочей группы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ответственными за порядок ведения журналов учета возлагается</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">На назначенного ответственного сотрудника</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">На руководителя подразделения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">На курирующего руководителя</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что такое репликация в PostgreSQL?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Копирование данных между серверами</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Автоматическая индексация</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Архивация</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что такое Vuex?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Хранилище состояния приложения Vue</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Бэкенд для Vue</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Планировщик задач</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Какой инструмент чаще всего применяется для автоматизации процессов BPM?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Camunda</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Jenkins</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Postman</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Что обозначает «асинхронная задача» в BPM?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Выполняется без блокировки дальнейших шагов процесса</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Выполняется мгновенно</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Всегда требует ручного подтверждения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Какой артефакт BPM чаще всего хранит данные о роли и ответственности?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">RACI‑матрица</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Диаграмма классов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">ERD</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Чем отличается поток (Thread) от процесса (Process)?</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Потоки делят память процесса, процессы имеют собственную память</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Поток — это независимая программа, процесс — часть программы</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Процессы всегда быстрее потоков</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Какими законами  регулируется деятельность АО &quot;ЕНПФ&quot;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Оба ответа верны</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Социальный кодекс Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">ЗРК «Об акционерных обществах»</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Кто имеет право на пенсионное обеспечение?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Оба ответа верны</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Граждане Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Иностранцы и лица без гражданства, постоянно проживающие на территории Республики Казахстан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">q</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Пользовательская документация создается на основе</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ra</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Функциональности ИС</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Требований для реализации</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">a</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Технического задания</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.31496062992125984"/>
+    <Footer x:Margin="0.19685039370078741" x:Data="&amp;R&amp;&quot;Times New Roman,обычный&quot;&amp;P"/>
+    <PageMargins x:Bottom="0.35433070866141736" x:Left="0.19685039370078741"
+     x:Right="0.19685039370078741" x:Top="0.74803149606299213"/>
+   </PageSetup>
+   <FitToPage/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <Scale>68</Scale>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Zoom>110</Zoom>
+   <Selected/>
+   <TopRowVisible>2</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>144</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
