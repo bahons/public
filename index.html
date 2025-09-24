@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaspi XML Editor</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #999; padding: 6px; }
+    th { background: #eee; }
+    td[contenteditable="true"] { background: #f9f9f9; }
+    button { margin-top: 15px; padding: 8px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Редактор Kaspi XML</h1>
+  <input type="file" id="fileInput" accept=".xml">
+  
+  <table id="table" style="display:none">
+    <thead>
+      <tr>
+        <th>SKU</th>
+        <th>Model</th>
+        <th>Brand</th>
+        <th>Available</th>
+        <th>StockCount</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <button id="saveBtn" style="display:none">Сохранить XML</button>
+
+  <script>
+    let xmlDoc;       // весь XML
+    let offersParent; // ссылка на <offers>
+    let offers = [];  // данные для таблицы
+
+    document.getElementById("fileInput").addEventListener("change", e => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = ev => {
+        const parser = new DOMParser();
+        xmlDoc = parser.parseFromString(ev.target.result, "application/xml");
+
+        offersParent = xmlDoc.getElementsByTagName("offers")[0];
+        const offerNodes = [...offersParent.getElementsByTagName("offer")];
+
+        offers = offerNodes.map(node => ({
+          node,
+          sku: node.getAttribute("sku") || "",
+          model: node.getElementsByTagName("model")[0]?.textContent || "",
+          brand: node.getElementsByTagName("brand")[0]?.textContent || "",
+          available: node.getElementsByTagName("availability")[0]?.getAttribute("available") || "",
+          stockCount: node.getElementsByTagName("availability")[0]?.getAttribute("stockCount") || "",
+          price: node.getElementsByTagName("cityprice")[0]?.textContent || ""
+        }));
+
+        renderTable();
+      };
+      reader.readAsText(file);
+    });
+
+    function renderTable() {
+      const tbody = document.querySelector("#table tbody");
+      tbody.innerHTML = "";
+      offers.forEach(p => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${p.sku}</td>
+          <td contenteditable="true">${p.model}</td>
+          <td contenteditable="true">${p.brand}</td>
+          <td contenteditable="true">${p.available}</td>
+          <td contenteditable="true">${p.stockCount}</td>
+          <td contenteditable="true">${p.price}</td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      document.getElementById("table").style.display = "table";
+      document.getElementById("saveBtn").style.display = "inline-block";
+    }
+
+    document.getElementById("saveBtn").addEventListener("click", () => {
+      const rows = document.querySelectorAll("#table tbody tr");
+
+      [...rows].forEach((r, i) => {
+        const p = offers[i];
+        const offerNode = p.node;
+
+        // model
+        let modelNode = offerNode.getElementsByTagName("model")[0];
+        if (!modelNode) {
+          modelNode = xmlDoc.createElement("model");
+          offerNode.appendChild(modelNode);
+        }
+        modelNode.textContent = r.children[1].textContent;
+
+        // brand
+        let brandNode = offerNode.getElementsByTagName("brand")[0];
+        if (!brandNode) {
+          brandNode = xmlDoc.createElement("brand");
+          offerNode.appendChild(brandNode);
+        }
+        brandNode.textContent = r.children[2].textContent;
+
+        // availability
+        let availabilityNode = offerNode.getElementsByTagName("availability")[0];
+        if (!availabilityNode) {
+          const availabilities = xmlDoc.createElement("availabilities");
+          availabilityNode = xmlDoc.createElement("availability");
+          availabilities.appendChild(availabilityNode);
+          offerNode.appendChild(availabilities);
+        }
+        availabilityNode.setAttribute("available", r.children[3].textContent);
+        availabilityNode.setAttribute("stockCount", r.children[4].textContent);
+
+        // cityprice
+        let citypriceNode = offerNode.getElementsByTagName("cityprice")[0];
+        if (!citypriceNode) {
+          const cityprices = xmlDoc.createElement("cityprices");
+          citypriceNode = xmlDoc.createElement("cityprice");
+          cityprices.appendChild(citypriceNode);
+          offerNode.appendChild(cityprices);
+        }
+        citypriceNode.textContent = r.children[5].textContent;
+      });
+
+      // сериализация XML обратно
+      const serializer = new XMLSerializer();
+      const xmlString = serializer.serializeToString(xmlDoc);
+
+      // скачивание
+      const blob = new Blob([xmlString], { type: "application/xml" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "kaspi_catalog.xml";
+      a.click();
+    });
+  </script>
+</body>
+</html>
