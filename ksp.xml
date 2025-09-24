@@ -1,0 +1,266 @@
+<kaspi_catalog xmlns="kaspiShopping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://kaspi.kz/kaspishopping.xsd" date="2025-08-20 17:23">
+<company>30304559</company>
+<merchantid>30304559</merchantid>
+<offers>
+<offer sku="115951598_336574005">
+<model>Yokohama iceGuard Stud iG65 225/55 R19 103 T с шипами</model>
+<brand>Yokohama</brand>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">82500</cityprice>
+</cityprices>
+</offer>
+<offer sku="145185187_664337750">
+<model>Yokohama IG65 225/55 R19 102 T с шипами</model>
+<brand>Yokohama</brand>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">82500</cityprice>
+</cityprices>
+</offer>
+<offer sku="12709501_417598876">
+<model>Yokohama Ice Guard IG65 225/55 R18 102T с шипами</model>
+<brand>Yokohama</brand>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">78000</cityprice>
+</cityprices>
+</offer>
+<offer sku="129012992_001499661">
+<model>Насос SAT ST-K131</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">9061</cityprice>
+</cityprices>
+</offer>
+<offer sku="129012732_025084162">
+<model>Насос SAT ST-K115</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">9206</cityprice>
+</cityprices>
+</offer>
+<offer sku="100807700_404928852">
+<model>Triangle IcelynX TI501 205/55 R16 94T с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">35000</cityprice>
+</cityprices>
+</offer>
+<offer sku="12709948_330085886">
+<model>Triangle TR757 175/65 R14 82Q с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">27000</cityprice>
+</cityprices>
+</offer>
+<offer sku="102540126_796026944">
+<model>Triangle PS01 185/65 R15 92T с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">29000</cityprice>
+</cityprices>
+</offer>
+<offer sku="106255734_954999239">
+<model>Triangle Trin LS01 185/75 R16C 104Q с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">37400</cityprice>
+</cityprices>
+</offer>
+<offer sku="106924109_005942157">
+<model>Triangle Trin LS01 185/75 R16C 104P с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">37400</cityprice>
+</cityprices>
+</offer>
+<offer sku="106529459_198284921">
+<model>Triangle Ice LinX TI501 215/60 R16 99T с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">36300</cityprice>
+</cityprices>
+</offer>
+<offer sku="106233632_669960996">
+<model>Triangle TI501 215/65 R16 102T с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">39600</cityprice>
+</cityprices>
+</offer>
+<offer sku="100624718_094276318">
+<model>Triangle PL02 235/45 R18 98V без шипов</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">43700</cityprice>
+</cityprices>
+</offer>
+<offer sku="144506910_229148696">
+<model>Triangle PL 02 (BKZ) 235/45 R18 98 V без шипов</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">43700</cityprice>
+</cityprices>
+</offer>
+<offer sku="100623272_249280602">
+<model>Triangle PL02 235/45 R18 98R без шипов</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">43700</cityprice>
+</cityprices>
+</offer>
+<offer sku="121975792_954038266">
+<model>Triangle PL02 235/45 R18 98 H без шипов</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">43700</cityprice>
+</cityprices>
+</offer>
+<offer sku="102339960_922506541">
+<model>Triangle TI501 235/55 R18 104T с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">51936</cityprice>
+</cityprices>
+</offer>
+<offer sku="12711554_809117323">
+<model>Triangle TR757 185/65 R14 90T с шипами</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="4.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">31050</cityprice>
+</cityprices>
+</offer>
+<offer sku="101138266_899858394">
+<model>Winkod масляный фильтр WO1985</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="8.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">798</cityprice>
+</cityprices>
+</offer>
+<offer sku="101128890_440743636">
+<model>Winkod воздушный фильтр WA2961</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="8.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">1867</cityprice>
+</cityprices>
+</offer>
+<offer sku="124241694_709013154">
+<model>MK KASHIYAMA Комплект Тормозных Колодок, Дисковый Тормоз D2270</model>
+<brand>MK KASHIYAMA</brand>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">17968</cityprice>
+</cityprices>
+</offer>
+<offer sku="131252252_341597731">
+<model>Winkod подшипник ступицы WHB0264</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">21232</cityprice>
+</cityprices>
+</offer>
+<offer sku="116354355_465163371">
+<model>Подрулевой шлейф SAT ST8430605050</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">4999</cityprice>
+</cityprices>
+</offer>
+<offer sku="117052129_624944311">
+<model>FRENKIT втулка направляющая суппорта тормозного 808001</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="2.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">2999</cityprice>
+</cityprices>
+</offer>
+<offer sku="117587718_860705143">
+<model>Sufix шрус наружный ST-1374</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">20234</cityprice>
+</cityprices>
+</offer>
+<offer sku="121970090_112064763">
+<model>THG прокладка головки блока цилиндров THC9176</model>
+<brand/>
+<availabilities>
+<availability available="yes" storeId="30304559_PP30" preOrder="0" stockCount="1.0"/>
+</availabilities>
+<cityprices>
+<cityprice cityId="710000000">6488</cityprice>
+</cityprices>
+</offer>
+</offers>
+</kaspi_catalog>
