@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AiTargetologist — документация</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#FAF8FC;
+    --surface:#FFFFFF;
+    --surface-alt:#F1EEF8;
+    --border:#E4DEF0;
+    --text:#201A2E;
+    --text-muted:#5F5876;
+    --accent:#5B3DF6;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#EEE9FE;
+    --good:#1E8E5A;
+    --good-soft:#E3F5EC;
+    --warn:#AD710D;
+    --warn-soft:#FBF0DA;
+    --risk:#C43D4B;
+    --risk-soft:#FBE8EA;
+    --info:#2C6FA8;
+    --info-soft:#E6F1FA;
+    --code-bg:#1B1626;
+    --code-text:#EFE9FE;
+    --code-border:#332C49;
+    --shadow: 0 1px 2px rgba(32,26,46,0.06), 0 8px 24px -12px rgba(32,26,46,0.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141019;
+      --surface:#1C1826;
+      --surface-alt:#221C30;
+      --border:#342B49;
+      --text:#EEE9F8;
+      --text-muted:#A79EC4;
+      --accent:#A491FA;
+      --accent-ink:#1A1428;
+      --accent-soft:#2B2242;
+      --good:#4FD69A;
+      --good-soft:#173428;
+      --warn:#E7B04E;
+      --warn-soft:#3A2C13;
+      --risk:#F2818C;
+      --risk-soft:#3B1E22;
+      --info:#8CC0EF;
+      --info-soft:#1B2E3E;
+      --code-bg:#100C18;
+      --code-text:#E7E1F7;
+      --code-border:#2E2640;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141019;
+    --surface:#1C1826;
+    --surface-alt:#221C30;
+    --border:#342B49;
+    --text:#EEE9F8;
+    --text-muted:#A79EC4;
+    --accent:#A491FA;
+    --accent-ink:#1A1428;
+    --accent-soft:#2B2242;
+    --good:#4FD69A;
+    --good-soft:#173428;
+    --warn:#E7B04E;
+    --warn-soft:#3A2C13;
+    --risk:#F2818C;
+    --risk-soft:#3B1E22;
+    --info:#8CC0EF;
+    --info-soft:#1B2E3E;
+    --code-bg:#100C18;
+    --code-text:#E7E1F7;
+    --code-border:#2E2640;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+
+  *{box-sizing:border-box;}
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important; scroll-behavior:auto !important;}
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Golos Text', 'Segoe UI', system-ui, sans-serif;
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Unbounded','Golos Text',sans-serif;
+    text-wrap:balance;
+    line-height:1.22;
+    color:var(--text);
+    margin:0;
+  }
+  a{color:var(--accent);}
+  code, .mono{font-family:'JetBrains Mono', ui-monospace, monospace; font-variant-numeric:tabular-nums;}
+
+  .shell{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 24px 96px;
+    display:grid;
+    grid-template-columns:248px minmax(0,1fr);
+    gap:56px;
+  }
+  @media (max-width:900px){
+    .shell{grid-template-columns:1fr; gap:0;}
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    grid-column:1 / -1;
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--accent);
+    display:inline-block;
+  }
+  .masthead h1{
+    font-size:clamp(2.1rem, 4vw, 3.1rem);
+    font-weight:800;
+    letter-spacing:-0.01em;
+  }
+  .masthead .tagline{
+    font-size:1.15rem;
+    color:var(--text-muted);
+    max-width:62ch;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:6px;
+  }
+  .meta-chip{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    padding:5px 11px;
+    border-radius:999px;
+    background:var(--surface-alt);
+    border:1px solid var(--border);
+    color:var(--text-muted);
+  }
+
+  /* ---------- sidebar / toc ---------- */
+  .toc-desktop{
+    display:block;
+    position:sticky;
+    top:24px;
+    align-self:start;
+    padding-top:40px;
+    max-height:calc(100vh - 48px);
+    overflow-y:auto;
+  }
+  .toc-desktop h5{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    margin:0 0 12px;
+  }
+  .toc-desktop nav{display:flex; flex-direction:column; gap:2px;}
+  .toc-desktop a, .toc-mobile nav a{
+    display:block;
+    padding:6px 10px;
+    border-radius:8px;
+    color:var(--text-muted);
+    text-decoration:none;
+    font-size:13.5px;
+    border-left:2px solid transparent;
+  }
+  .toc-desktop a:hover{ background:var(--surface-alt); color:var(--text); }
+  .toc-desktop a.sub{ padding-left:24px; font-size:13px; }
+  .toc-mobile{ display:none; }
+  @media (max-width:900px){
+    .toc-desktop{display:none;}
+    .toc-mobile{
+      display:block;
+      margin:20px 0 8px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:4px 16px;
+    }
+    .toc-mobile summary{
+      cursor:pointer;
+      font-family:'JetBrains Mono',monospace;
+      font-size:12px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      padding:14px 0;
+      color:var(--text-muted);
+    }
+    .toc-mobile nav{display:flex; flex-direction:column; padding-bottom:14px;}
+    .toc-mobile nav a{padding:7px 4px; font-size:14px; text-decoration:none; color:var(--text);}
+    .toc-mobile nav a.sub{padding-left:18px; color:var(--text-muted); font-size:13px;}
+  }
+
+  /* ---------- main content ---------- */
+  main{padding-top:40px; min-width:0;}
+  section{
+    padding:52px 0;
+    border-bottom:1px solid var(--border);
+    max-width:760px;
+  }
+  section:last-child{border-bottom:none;}
+  .section-num{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--accent);
+    font-size:13px;
+    letter-spacing:0.06em;
+    margin-bottom:8px;
+    display:block;
+  }
+  section h2{
+    font-size:1.7rem;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  section h3{
+    font-size:1.2rem;
+    font-weight:600;
+    margin:34px 0 12px;
+  }
+  section h4{
+    font-size:1rem;
+    font-weight:700;
+    margin:22px 0 8px;
+    color:var(--text);
+  }
+  section > p.lede{
+    color:var(--text-muted);
+    font-size:1.06rem;
+    margin-top:10px;
+    max-width:64ch;
+  }
+  p{margin:0 0 14px; max-width:68ch;}
+  ul,ol{margin:0 0 16px; padding-left:22px;}
+  li{margin-bottom:6px; max-width:64ch;}
+  strong{color:var(--text); font-weight:700;}
+
+  /* pills / status */
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:3px 9px;
+    border-radius:999px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .pill-good{background:var(--good-soft); color:var(--good);}
+  .pill-warn{background:var(--warn-soft); color:var(--warn);}
+  .pill-risk{background:var(--risk-soft); color:var(--risk);}
+  .pill-info{background:var(--info-soft); color:var(--info);}
+  .pill-neutral{background:var(--surface-alt); color:var(--text-muted); border:1px solid var(--border);}
+
+  .feature-row{
+    display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    margin:26px 0 6px;
+  }
+  .feature-row h4{margin:0;}
+
+  /* callouts */
+  .callout{
+    border:1px solid var(--border);
+    background:var(--surface);
+    border-radius:14px;
+    padding:18px 20px;
+    margin:20px 0;
+    box-shadow:var(--shadow);
+  }
+  .callout-head{
+    display:flex; align-items:center; gap:8px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+    font-weight:600;
+  }
+  .callout.reality{ background:var(--warn-soft); border-color:transparent; }
+  .callout.reality .callout-head{ color:var(--warn); }
+  .callout.risk{ background:var(--risk-soft); border-color:transparent; }
+  .callout.risk .callout-head{ color:var(--risk); }
+  .callout.info{ background:var(--info-soft); border-color:transparent; }
+  .callout.info .callout-head{ color:var(--info); }
+  .callout p:last-child{margin-bottom:0;}
+  .callout p{max-width:none;}
+
+  /* tables */
+  .table-wrap{overflow-x:auto; margin:18px 0 24px; border:1px solid var(--border); border-radius:12px;}
+  table{width:100%; border-collapse:collapse; font-size:14.5px; min-width:480px;}
+  thead th{
+    text-align:left;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    background:var(--surface-alt);
+    padding:10px 14px;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:11px 14px;
+    border-bottom:1px solid var(--border);
+    vertical-align:top;
+    color:var(--text);
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody td.num{font-family:'JetBrains Mono',monospace; font-variant-numeric:tabular-nums; white-space:nowrap;}
+
+  /* code block */
+  pre{
+    background:var(--code-bg);
+    color:var(--code-text);
+    border:1px solid var(--code-border);
+    border-radius:12px;
+    padding:16px 18px;
+    overflow-x:auto;
+    font-size:13px;
+    line-height:1.6;
+    margin:16px 0;
+  }
+  pre code{font-family:'JetBrains Mono',monospace;}
+  .quote{
+    background:var(--code-bg);
+    color:var(--code-text);
+    border-radius:12px;
+    padding:18px 20px;
+    margin:18px 0;
+    font-size:14px;
+    line-height:1.7;
+  }
+  .quote .qline{margin-bottom:8px;}
+  .quote .qline:last-child{margin-bottom:0;}
+  .quote b{color:#fff;}
+
+  /* flow diagram */
+  .flow{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    align-items:stretch;
+    margin:24px 0 8px;
+  }
+  @media (max-width:640px){ .flow{grid-template-columns:1fr;} }
+  .flow-node{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:16px 14px;
+    font-size:13px;
+    position:relative;
+  }
+  .flow-node:first-child{border-radius:12px 0 0 12px;}
+  .flow-node:last-child{border-radius:0 12px 12px 0;}
+  @media (max-width:640px){
+    .flow-node{border-radius:0 !important; border-top:none;}
+    .flow-node:first-child{border-top:1px solid var(--border); border-radius:12px 12px 0 0 !important;}
+    .flow-node:last-child{border-radius:0 0 12px 12px !important;}
+  }
+  .flow-node + .flow-node{border-left:none;}
+  @media (max-width:640px){ .flow-node + .flow-node{border-left:1px solid var(--border);} }
+  .flow-node .ft{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; display:block;}
+  .flow-node .fd{color:var(--text-muted); font-size:12.5px;}
+  .flow-arrow{
+    display:flex; align-items:center; justify-content:center;
+    color:var(--text-muted); font-size:16px;
+    padding:0 2px;
+  }
+
+  /* numbered journey */
+  .journey{counter-reset:step;}
+  .step{
+    display:grid;
+    grid-template-columns:40px 1fr;
+    gap:16px;
+    margin-bottom:8px;
+  }
+  .step-num{
+    counter-increment:step;
+    font-family:'Unbounded',sans-serif;
+    font-weight:700;
+    font-size:1.1rem;
+    color:var(--accent-soft);
+    -webkit-text-stroke:1.3px var(--accent);
+    line-height:1.4;
+  }
+  .step-body{border-left:2px solid var(--border); padding:0 0 28px 18px; margin-left:-1px;}
+  .step:last-child .step-body{border-left:2px solid transparent;}
+  .step-body h4{margin-top:0;}
+
+  hr.soft{border:none; border-top:1px solid var(--border); margin:28px 0;}
+
+  .kv{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:8px 16px;
+    margin:16px 0;
+    font-size:14.5px;
+  }
+  @media (max-width:520px){ .kv{grid-template-columns:1fr;} }
+  .kv dt{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;}
+  .kv dd{margin:0;}
+
+  footer.doc-footer{
+    grid-column:1/-1;
+    padding:40px 0 10px;
+    color:var(--text-muted);
+    font-size:13px;
+    border-top:1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <header class="masthead">
+    <span class="eyebrow">Внутренняя документация · AiTargetologist</span>
+    <h1>Что на самом деле умеет платформа</h1>
+    <p class="tagline">Полный срез продукта: продажа, онбординг в Telegram, веб-панель, автопилот бюджета и WhatsApp AI-менеджер — как это устроено в коде сегодня, а не как это звучит в рекламе.</p>
+    <div class="meta-row">
+      <span class="meta-chip">срез кода: 2026-09-12</span>
+      <span class="meta-chip">рынок: Казахстан и СНГ</span>
+      <span class="meta-chip">стек: .NET 8 / PostgreSQL / n8n</span>
+      <span class="meta-chip">каналы: Instagram · Facebook</span>
+    </div>
+  </header>
+
+  <aside class="toc-desktop">
+    <h5>Содержание</h5>
+    <nav>
+      <a href="#overview">1. Что такое AiTargetologist</a>
+      <a href="#architecture">2. Из чего собрана платформа</a>
+      <a href="#journey">3. Путь клиента — от первого сообщения до рекламы</a>
+      <a class="sub" href="#j-sale">3.1 Продажа в WhatsApp</a>
+      <a class="sub" href="#j-start">3.2 Первый /start в Telegram</a>
+      <a class="sub" href="#j-brief">3.3 Бриф из 14 вопросов</a>
+      <a class="sub" href="#j-creative">3.4 Что бот делает с брифом</a>
+      <a class="sub" href="#j-oauth">3.5 Подключение Facebook</a>
+      <a class="sub" href="#j-launch">3.6 Запуск рекламы в панели</a>
+      <a href="#panel">4. Веб-панель клиента</a>
+      <a href="#autopilot">5. Автопилот и защита бюджета</a>
+      <a href="#ai-tools">6. AI-анализ и детектор аномалий</a>
+      <a href="#reports">7. Отчёты в Telegram</a>
+      <a href="#wa-manager">8. WhatsApp AI-менеджер для бизнеса клиента</a>
+      <a href="#data">9. Что хранит система</a>
+      <a href="#integrations">10. Интеграции</a>
+      <a href="#billing">11. Биллинг</a>
+      <a href="#gaps">12. Расхождения и риски</a>
+      <a href="#pricing">13. Цены одной таблицей</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <details class="toc-mobile">
+      <summary>Содержание</summary>
+      <nav>
+        <a href="#overview">1. Что такое AiTargetologist</a>
+        <a href="#architecture">2. Из чего собрана платформа</a>
+        <a href="#journey">3. Путь клиента</a>
+        <a class="sub" href="#j-sale">3.1 Продажа в WhatsApp</a>
+        <a class="sub" href="#j-start">3.2 Первый /start</a>
+        <a class="sub" href="#j-brief">3.3 Бриф из 14 вопросов</a>
+        <a class="sub" href="#j-creative">3.4 Что делает бот с брифом</a>
+        <a class="sub" href="#j-oauth">3.5 Подключение Facebook</a>
+        <a class="sub" href="#j-launch">3.6 Запуск рекламы</a>
+        <a href="#panel">4. Веб-панель клиента</a>
+        <a href="#autopilot">5. Автопилот</a>
+        <a href="#ai-tools">6. AI-анализ и аномалии</a>
+        <a href="#reports">7. Отчёты в Telegram</a>
+        <a href="#wa-manager">8. WhatsApp AI-менеджер</a>
+        <a href="#data">9. Данные</a>
+        <a href="#integrations">10. Интеграции</a>
+        <a href="#billing">11. Биллинг</a>
+        <a href="#gaps">12. Расхождения и риски</a>
+        <a href="#pricing">13. Цены</a>
+      </nav>
+    </details>
+
+    <!-- 1 -->
+    <section id="overview">
+      <span class="section-num">01</span>
+      <h2>Что такое AiTargetologist</h2>
+      <p class="lede">AI-платформа автоматического запуска и управления рекламой в Instagram и Facebook для малого и среднего бизнеса в Казахстане и СНГ. Идея простая: владелец бизнеса описывает свой бизнес — платформа сама собирает рекламу, тестирует аудитории, масштабирует то, что работает, и выключает то, что сливает бюджет. Таргетолог не нужен.</p>
+
+      <h3>Кому это подходит</h3>
+      <p>Малый и средний бизнес без штатного маркетолога: салоны, клиники, магазины, локальные сервисы — тем, кто раньше либо платил таргетологу/агентству, либо вообще не запускал рекламу из-за сложности рекламного кабинета Meta.</p>
+
+      <h3>Заявленная ценность против того, что реально работает</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Обещание</th><th>Статус в коде</th></tr></thead>
+          <tbody>
+            <tr><td>Запуск рекламы за 5 минут прямо в Telegram</td><td><span class="pill pill-warn">частично</span> бот за 5 минут собирает бриф и сценарии креативов; снять видео и нажать «Запустить» клиент должен сам в веб-панели — см. <a href="#j-creative">3.4</a></td></tr>
+            <tr><td>Отчёт каждое утро в 9:00</td><td><span class="pill pill-good">работает</span>, но шлётся двумя разными сервисами одновременно — см. <a href="#reports">§7</a></td></tr>
+            <tr><td>Автопилот масштабирует аккуратно, чтобы не словить бан Meta</td><td><span class="pill pill-good">работает</span> — плавный рост бюджета, стоп-лосс по CPL, пауза точечно по объявлению — см. <a href="#autopilot">§5</a></td></tr>
+            <tr><td>Тестирует несколько аудиторий и оставляет рабочие</td><td><span class="pill pill-good">работает</span> — <code>AudienceTest</code>: brief_interests → similar_interests → lookalike 1%/3% → broad</td></tr>
+            <tr><td>Не нужен таргетолог, работает 24/7</td><td><span class="pill pill-warn">частично</span> — создание креатива и первый запуск всё ещё требуют участия владельца бизнеса</td></tr>
+            <tr><td>AI генерирует тексты и сценарии рекламы</td><td><span class="pill pill-good">работает</span> — покадровые сценарии по брифу, плюс AI-анализ уже запущенного креатива по кнопке</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="architecture">
+      <span class="section-num">02</span>
+      <h2>Из чего собрана платформа</h2>
+      <p class="lede">Четыре независимых процесса вокруг одной базы PostgreSQL.</p>
+
+      <div class="flow">
+        <div class="flow-node"><span class="ft">Telegram-бот</span>AiTargetologist.Bot — тонкий long-polling слой, почти без логики, пересылает апдейты в API<div class="fd"></div></div>
+        <div class="flow-node"><span class="ft">API / бэкенд</span>AiTargetologist.Api — вся бизнес-логика: бриф, Meta Graph API, автопилот, отчёты<div class="fd"></div></div>
+        <div class="flow-node"><span class="ft">Веб-панель</span>Telegram Mini App (одна SPA-страница в wwwroot) — дашборд, создание рекламы, автопилот, WhatsApp<div class="fd"></div></div>
+        <div class="flow-node"><span class="ft">n8n</span>self-hosted оркестратор диалогов WhatsApp AI-менеджера, на отдельном Green API номере под каждую компанию<div class="fd"></div></div>
+      </div>
+
+      <h3>Проекты в решении</h3>
+      <div class="kv">
+        <dt>Api</dt><dd>13 контроллеров, вся бизнес-логика, интеграции с Meta/OpenAI, JWT-авторизация фронтенда</dd>
+        <dt>Bot</dt><dd>Только приём Telegram-апдейтов и пересылка в Api по HTTP; своей БД/состояния почти не хранит</dd>
+        <dt>Core</dt><dd>Модели данных, DTO, интерфейсы сервисов — общий контракт между Api и Infrastructure</dd>
+        <dt>Infrastructure</dt><dd>Реализация сервисов (автопилот, отчёты, Facebook, WhatsApp-конфиг), EF Core миграции</dd>
+      </div>
+
+      <div class="callout info">
+        <div class="callout-head">Для контекста</div>
+        <p>Веб-панель — это не отдельный сайт с несколькими страницами, а один файл <code>wwwroot/webapp/index.html</code>, который открывается как Telegram Mini App через кнопку меню бота «📊 Статистика». Отдельного публичного лендинга или личного кабинета вне Telegram нет.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section id="journey">
+      <span class="section-num">03</span>
+      <h2>Путь клиента — от первого сообщения до работающей рекламы</h2>
+      <p class="lede">Полная цепочка: как бизнес узнаёт о платформе, что происходит на каждом шаге и где на самом деле запускается реклама.</p>
+
+      <div class="journey">
+
+        <div class="step" id="j-sale">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Продажа платформы — AI-менеджер в WhatsApp</h4>
+            <p>Новых клиентов платформа закрывает сама, через персонального AI-менеджера в WhatsApp — без обещаний «перезвоним», без скидок и без второго касания живым человеком. Правила, зашитые в его системный промпт:</p>
+            <div class="quote">
+              <div class="qline"><b>Кто он.</b> «Персональный AI-менеджер, разработан специально для этого чата» — не называет себя по имени, не признаётся, что это языковая модель.</div>
+              <div class="qline"><b>Темп.</b> Один ответ на одно сообщение, максимум 3–4 предложения, без повторных приветствий по ходу диалога.</div>
+              <div class="qline"><b>Главный запрет.</b> Нельзя говорить «менеджер свяжется» или «оставьте номер» — это ложь, реального колл-центра нет. AI обязан закрыть сделку сам, в этом же чате.</div>
+              <div class="qline"><b>Сценарий закрытия.</b> Подтвердить решение → спросить, есть ли рекламный кабинет Facebook → если есть, объяснить партнёрский доступ; если нет — успокоить по срокам → реквизиты для оплаты только после явного согласия платить.</div>
+              <div class="qline"><b>Признаки горячего лида.</b> Спрашивает цену, говорит «интересно»/«хочу попробовать», называет бюджет, жалуется на дорогого таргетолога, соглашается оплатить.</div>
+            </div>
+            <p>Технически это тот же движок, что описан в <a href="#wa-manager">§8</a>: номер на Green API + AI-агент через n8n, с той разницей, что здесь агент продаёт саму платформу, а не товары клиента.</p>
+          </div>
+        </div>
+
+        <div class="step" id="j-start">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Первый /start в Telegram</h4>
+            <p>Клиент открывает Telegram-бота и пишет <code>/start</code>. Бот ищет компанию по chat ID; если это первый контакт — просит email существующего веб-аккаунта или создаёт новую компанию-заглушку, если аккаунта ещё нет. Дальше ставит кнопку меню «📊 Статистика» (открывает веб-панель) и коротким приветствием предлагает написать «Да» или «Начать», чтобы запустить сбор брифа.</p>
+            <p>Никаких reply-кнопок или inline-меню для брифа нет — весь диалог текстовый, триггерные слова («да», «начать», «нет») распознаются без учёта регистра. Команда <code>/restart</code> стирает все брифы клиента и начинает заново.</p>
+          </div>
+        </div>
+
+        <div class="step" id="j-brief">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Бриф из 14 вопросов</h4>
+            <p>Линейный опросник, один вопрос за раз, состояние хранится в БД (<code>MarketingBrief.CurrentQuestion</code>):</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th class="num">№</th><th>Вопрос</th><th>Зачем</th></tr></thead>
+                <tbody>
+                  <tr><td class="num">1</td><td>Название бизнеса</td><td>идентификация</td></tr>
+                  <tr><td class="num">2</td><td>Ниша / что продаёте</td><td>контекст для креатива</td></tr>
+                  <tr><td class="num">3</td><td>Instagram (или «нет»)</td><td>ссылка в объявлении</td></tr>
+                  <tr><td class="num">4</td><td>Что именно рекламировать, цены</td><td>оффер</td></tr>
+                  <tr><td class="num">5</td><td>Город</td><td>гео-таргетинг</td></tr>
+                  <tr><td class="num">6</td><td>Кто клиенты (пол/возраст/род занятий текстом)</td><td>портрет ЦА</td></tr>
+                  <tr><td class="num">7</td><td>Чем интересуются клиенты</td><td>подбор интересов Facebook</td></tr>
+                  <tr><td class="num">8</td><td>Возраст / пол (структурно)</td><td>таргетинг</td></tr>
+                  <tr><td class="num">9</td><td>Боли клиентов</td><td>текст объявления</td></tr>
+                  <tr><td class="num">10</td><td>Что клиенты хотят получить</td><td>текст объявления</td></tr>
+                  <tr><td class="num">11</td><td>Почему выбирать вас</td><td>УТП</td></tr>
+                  <tr><td class="num">12</td><td>Спецпредложение</td><td>оффер / CTA</td></tr>
+                  <tr><td class="num">13</td><td>Дневной бюджет ($)</td><td>стартовые настройки кампании</td></tr>
+                  <tr><td class="num">14</td><td>Целевая цена заявки ($)</td><td>порог для автопилота и стоп-лосса</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>После последнего ответа <code>BriefBasedTargetingService</code> сам переводит текстовые интересы и город в Facebook targeting spec (через поиск <code>adinterest</code>/<code>adgeolocation</code> в Graph API) — но кампания в Meta ещё не создаётся.</p>
+          </div>
+        </div>
+
+        <div class="step" id="j-creative">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Что бот делает с готовым брифом</h4>
+            <p>Клиент получает сводку брифа и предложение написать «Создай 3 креатива» или «Креатив про скидку». В ответ AI генерирует не готовую рекламу, а <strong>покадровые сценарии видео</strong>: хук первых 3 секунд, тайминг, визуал, войсовер, текст на экране, CTA и объяснение «почему сработает».</p>
+            <div class="callout reality">
+              <div class="callout-head">Важное уточнение к маркетингу</div>
+              <p>Дальше в коде прямо зашита инструкция клиенту: выбрать 2–3 лучших сценария → самому снять видео (15 сек) → загрузить в веб-панель → запустить рекламу. Полного автозапуска «AI сам снял и включил рекламу» в текущей версии нет — эту часть выполняет владелец бизнеса.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="j-oauth">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Подключение рекламного кабинета Facebook</h4>
+            <p>В веб-панели — кнопка «Подключить Facebook». Дальше стандартный OAuth-диалог Meta:</p>
+            <ol>
+              <li>Платформа формирует ссылку на <code>facebook.com/v25.0/dialog/oauth</code> со scope на рекламу, страницы, Instagram и WhatsApp Business;</li>
+              <li>клиент логинится и подтверждает доступ в своём Facebook;</li>
+              <li>бэкенд обменивает код на долгосрочный токен (~60 дней) и сам подтягивает все Business Manager'ы, рекламные кабинеты и страницы клиента.</li>
+            </ol>
+            <p>Вводить Business Manager ID или токен вручную не нужно — только логин через диалог Facebook. Есть отдельная кнопка ручной пересинхронизации, если список кабинетов в Facebook изменился.</p>
+          </div>
+        </div>
+
+        <div class="step" id="j-launch">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h4>Запуск рекламы — уже в веб-панели</h4>
+            <p>Реальный автозапуск происходит здесь, не в Telegram. Клиент загружает снятое видео (или фото), заново — уже структурированно, через форму, а не текстом — указывает цель, гео, возраст, пол, бюджет и время старта, и жмёт «Загрузить и запустить». Подробности экрана — в <a href="#panel">§4</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section id="panel">
+      <span class="section-num">04</span>
+      <h2>Веб-панель клиента</h2>
+      <p class="lede">Telegram Mini App на русском языке, тёмная тема, крупные кнопки — рассчитана на владельца бизнеса с телефона, а не на профессионального таргетолога. Один и тот же экран показывает разный набор элементов для роли <span class="pill pill-neutral">admin</span> и <span class="pill pill-neutral">client</span>.</p>
+
+      <div class="feature-row"><h4>Дашборд</h4></div>
+      <ul>
+        <li>индикатор статуса подключения Facebook + выбор Business Manager / кабинета (только у админа);</li>
+        <li>переключатель периода: сегодня / вчера / 7 дней / 30 дней / произвольный диапазон;</li>
+        <li>кнопка «Бюджет» — баланс и статус рекламного кабинета;</li>
+        <li>4 метрики сверху: расход, лиды, CPL, показы — суммарно за период;</li>
+        <li>кнопки каналов: WhatsApp AI-менеджер (рабочий), TikTok и Google — оба помечены «в разработке»;</li>
+        <li>список кампаний с индивидуальным тумблером старт/пауза на каждой карточке, активные — сверху.</li>
+      </ul>
+
+      <div class="feature-row"><h4>Создание рекламы</h4><span class="pill pill-good">видео до 500 МБ</span><span class="pill pill-good">фото до 30 МБ</span></div>
+      <p>Форма-бриф второго уровня (уже структурированная, не текстовый диалог): цель (сообщение в WhatsApp / сообщение в Instagram / переходы в Instagram) → страница Facebook/Instagram → название и текст объявления → первый вопрос клиенту в чате → город (список казахстанских городов + соседние страны) → возраст и пол → дневной бюджет → время старта. Крупные видео (&gt;20 МБ) заливаются резюмируемой загрузкой по чанкам, чтобы не терять прогресс на нестабильном мобильном интернете.</p>
+
+      <div class="feature-row"><h4>Детали кампании</h4></div>
+      <ul>
+        <li>6 метрик человеческим языком («написали вам», «кликнули из увидевших») вместо голых терминов;</li>
+        <li>изменение бюджета группы объявлений прямо из модалки (заблокировано, если бюджет управляется на уровне кампании — CBO);</li>
+        <li>список отдельных видео/объявлений <em>внутри</em> кампании — у каждого свой тумблер и цветовой вердикт (работает / плохо / рано судить / выключено) по тем же порогам, что использует автопилот;</li>
+        <li>кнопка «Проанализировать» — AI-разбор конкретного креатива по запросу (не автоматически, чтобы не тратить токены впустую);</li>
+        <li>статистика по дням за всю историю кампании.</li>
+      </ul>
+
+      <div class="feature-row"><h4>AI автопилот</h4></div>
+      <p>Тумблер вкл/выкл + выбор режима — «по стоимости качественного лида» (по умолчанию) или «по стоимости лида» — плюс статус последнего запуска. Расширенные параметры (лимиты роста, расписание) на экране не редактируются — зашиты константами на бэкенде.</p>
+
+      <div class="feature-row"><h4>WhatsApp AI-менеджер</h4></div>
+      <p>Если подписка на модуль не оплачена — просто пояснение и просьба написать для активации (оплата вне приложения). После оплаты — QR-код для привязки номера через Green API, а после привязки — выбор готового сценария, промпт-инструкция для AI и поле для собственного ключа OpenAI клиента. Подробнее — <a href="#wa-manager">§8</a>.</p>
+
+      <div class="callout info">
+        <div class="callout-head">Чего нет на фронте</div>
+        <p>Отдельного экрана биллинга/цен, истории переписок с клиентами конечного бизнеса и явной атрибуции продаж к рекламным кампаниям в интерфейсе нет — эти данные существуют в базе, но не выведены в Mini App.</p>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section id="autopilot">
+      <span class="section-num">05</span>
+      <h2>Автопилот и защита бюджета</h2>
+      <p class="lede">В системе одновременно живут два независимых механизма автобюджета — это осознанно разделено на уровне бэкенда защитой от одновременного включения на одну компанию.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Механизм</th><th>Что делает</th><th>Уровень</th></tr></thead>
+          <tbody>
+            <tr><td><strong>AutopilotService</strong></td><td>Плавно поднимает бюджет успешных групп объявлений (по умолчанию до +35% с шагом ~+6%/день на 5 дней вместо скачка), решения по CPL или «CPL качественного лида»</td><td>на AdSet, в рамках рекламного кабинета</td></tr>
+            <tr><td><strong>AutoOptimizationService</strong></td><td>Второй, более простой движок: пороги CPL upper/lower и CTR lower, корректирует бюджет на процент</td><td>на все кампании компании разом</td></tr>
+            <tr><td><strong>AdPerformanceGuard</strong></td><td>Стоп-лосс и защита обучения — правила ниже</td><td>на конкретное объявление (Ad)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout risk">
+        <div class="callout-head">Гвард от конфликта</div>
+        <p>Оба движка автобюджета правят один и тот же <code>daily_budget</code> в Meta. Включить <code>AutopilotSettings</code> и <code>AutoOptimizationSettings</code> одновременно на одну компанию нельзя — бэкенд бросает ошибку и возвращает 409. Гвард защищает только от новых включений; если у компании оба флага были включены раньше, до гварда, это нужно проверять в базе отдельно.</p>
+      </div>
+
+      <h3>Правила AdPerformanceGuard</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Правило</th><th>Условие</th><th>Действие</th></tr></thead>
+          <tbody>
+            <tr><td>Защита обучения</td><td>объявление младше 7 дней и расход ниже 10×целевого CPL (или $10 по умолчанию)</td><td>не трогать</td></tr>
+            <tr><td>Стоп-лосс</td><td>CPL &gt; 2×целевого (или $20) и (старше 7 дней или превышен мин. расход)</td><td>выключить конкретное объявление, остальные в группе не трогать</td></tr>
+            <tr><td>Нехватка контента</td><td>после паузы в группе осталось &lt;2 активных объявлений</td><td>уведомление владельцу в Telegram — нужен новый ролик</td></tr>
+            <tr><td>Слишком много вариантов</td><td>кампания младше 7 дней и &gt;3 активных таргетингов</td><td>только предупреждение в лог, без действий</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Тест аудиторий</h3>
+      <p>Отдельная цепочка тестирования аудиторий по нарастающей: сначала интересы из брифа → похожие интересы → lookalike 1% → lookalike 3% → широкая аудитория без таргетинга. По каждому шагу фиксируются CPL/CTR и итог (победила / провалилась), прежде чем переходить к следующему.</p>
+    </section>
+
+    <!-- 6 -->
+    <section id="ai-tools">
+      <span class="section-num">06</span>
+      <h2>AI-анализ креатива и детектор аномалий</h2>
+
+      <h3>AI-анализ по кнопке</h3>
+      <p>В деталях кампании у каждого объявления есть кнопка «Проанализировать» — по клику бэкенд отправляет метрики и контекст в OpenAI (модель <code>gpt-4o-mini</code>) и возвращает оценку от 1 до 10 с текстовой рекомендацией. Запускается только вручную, не по расписанию — чтобы не расходовать токены на объявления, которые никто не смотрит.</p>
+
+      <h3>Детектор аномалий</h3>
+      <p>Сравнивает сегодняшний день со скользящим 7-дневным средним по CPL, CTR и расходу. При отклонении шлёт клиенту предупреждение в Telegram и отдельно — техническую копию в admin-чат с деталями по компании и кабинету.</p>
+    </section>
+
+    <!-- 7 -->
+    <section id="reports">
+      <span class="section-num">07</span>
+      <h2>Отчёты в Telegram</h2>
+      <p class="lede">Заявлено «отчёт каждое утро в 9:00» — в коде это действительно происходит, но двумя параллельными сервисами, и для разных клиентов по-разному.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Сервис</th><th>Кому</th><th>Формат</th></tr></thead>
+          <tbody>
+            <tr><td><strong>AutopilotHostedService</strong></td><td>только клиентам с включённым автопилотом, в их собственном часовом поясе</td><td>богатый HTML-отчёт: сводка, разбивка по кампаниям, что автопилот изменил и почему, динамика CPL день к дню, рекомендации AI</td></tr>
+            <tr><td><strong>DailyReportScheduler</strong></td><td>всем активным компаниям с привязанным Telegram (09:00 Asia/Almaty)</td><td>простой текст: показы/клики/лиды/расход/CPL/CTR по кампании, без оформления</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout reality">
+        <div class="callout-head">Что стоит знать</div>
+        <p>Клиент с включённым автопилотом получает оба сообщения в одно и то же утро — подробный отчёт от автопилота и упрощённый текстовый дубль. Если это не задумано, второй сервис стоит отключить для таких клиентов либо явно развести их по смыслу (например, оставить простой отчёт только тем, у кого автопилот выключен).</p>
+      </div>
+
+      <p>Если у кабинета нет активности больше 3 дней — вместо полного отчёта уходит короткое напоминание; если больше — отчёт не шлётся вовсе, чтобы не спамить.</p>
+    </section>
+
+    <!-- 8 -->
+    <section id="wa-manager">
+      <span class="section-num">08</span>
+      <h2>WhatsApp AI-менеджер для бизнеса клиента</h2>
+      <p class="lede">Это не бот «для лидов конкретной рекламной кампании внутри одного номера платформы» — архитектура полностью пересобрана в мультитенантную: у каждой компании-клиента свой номер и свой AI-агент.</p>
+
+      <div class="callout info">
+        <div class="callout-head">Как это менялось</div>
+        <p>Раньше в проекте был один общий WhatsApp-бот на одном номере (тот самый, что продаёт саму платформу, см. <a href="#j-sale">3.1</a>), со своей машиной состояний диалога прямо в C#-коде. Эта версия удалена миграцией <code>RemoveLegacyWhatsAppBot</code>. Сейчас диалоговая логика для клиентских AI-агентов вынесена в self-hosted <strong>n8n</strong> — backend лишь хранит конфигурацию и историю, а сам разговор с покупателем ведёт workflow в n8n.</p>
+      </div>
+
+      <h3>Как это работает для владельца бизнеса</h3>
+      <ol>
+        <li>Модуль нужно оплатить отдельно — активацию вручную включает админ платформы (<code>IsPaid</code>);</li>
+        <li>после оплаты клиент сканирует QR-код в веб-панели — так к его аккаунту привязывается собственный номер WhatsApp через Green API;</li>
+        <li>клиент выбирает готовый сценарий из каталога (например, «запись на встречу», «продажа услуги»), пишет свой промпт-инструкцию и подставляет <strong>свой</strong> ключ OpenAI — токены на диалоги списываются с ключа клиента, не с бюджета платформы;</li>
+        <li>backend переключает для этой компании соответствующий workflow в n8n (<code>ProvisionSchemeAsync</code>).</li>
+      </ol>
+
+      <h3>Что хранится в базе по каждому диалогу</h3>
+      <ul>
+        <li><strong>История переписки</strong> — последние сообщения (роль user/assistant) на клиента, чтобы AI видел контекст, а не только последнее сообщение;</li>
+        <li><strong>Записи на встречу</strong> — если выбран сценарий с бронированием слотов;</li>
+        <li><strong>Sale</strong> — фиксация сделки в момент, когда AI довёл диалог до отправки реквизитов оплаты (статусы Pending / Confirmed / Cancelled).</li>
+      </ul>
+
+      <div class="callout risk">
+        <div class="callout-head">Открытый вопрос</div>
+        <p>Атрибуция конкретной продажи к конкретной рекламной кампании (какое объявление привело покупателя в WhatsApp) в текущей схеме не реализована — Sale существует как факт сделки, но без связи с Campaign/AdSet. Без этого автопилот физически не может оптимизироваться по ROAS, только по CPL/CTR.</p>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section id="data">
+      <span class="section-num">09</span>
+      <h2>Что хранит система</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Группа</th><th>Сущности</th></tr></thead>
+          <tbody>
+            <tr><td>Клиенты и доступ</td><td><code>Company</code>, <code>User</code>, <code>UserFacebookAdAccount</code></td></tr>
+            <tr><td>Meta / Facebook</td><td><code>FacebookBusinessManager</code>, <code>FacebookAdAccount</code></td></tr>
+            <tr><td>Рекламная иерархия</td><td><code>Campaign</code>, <code>AdSet</code>, <code>Ad</code>, <code>ReportHistory</code>, <code>AdAccountCampaignMapping</code>, <code>AdSetTargetingMapping</code></td></tr>
+            <tr><td>Автопилот (движок 1)</td><td><code>AutopilotSettings</code>, <code>AutopilotScalingState</code>, <code>AutopilotAdSetBudgetBaseline</code>, <code>AutopilotRun</code>, <code>AutopilotRunLock</code>, <code>AutopilotPause</code>, <code>AudienceTest</code></td></tr>
+            <tr><td>Автобюджет (движок 2)</td><td><code>AutoOptimizationSettings</code></td></tr>
+            <tr><td>AI-инструменты</td><td><code>CreativeAnalysis</code>, <code>AnomalyLog</code></td></tr>
+            <tr><td>Бриф из Telegram</td><td><code>MarketingBrief</code>, <code>BriefBasedTargeting</code></td></tr>
+            <tr><td>Продажи платформы</td><td><code>Sale</code>, <code>BroadcastPost</code></td></tr>
+            <tr><td>WhatsApp AI-менеджер</td><td><code>CompanyWhatsAppConfig</code>, <code>CompanyWhatsAppAgent</code>, <code>WhatsAppScheme</code>, <code>WhatsAppChatMessage</code>, <code>WaAppointment</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section id="integrations">
+      <span class="section-num">10</span>
+      <h2>Интеграции</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Сервис</th><th>Роль</th></tr></thead>
+          <tbody>
+            <tr><td>Meta Graph API</td><td>OAuth, создание Campaign/AdSet/Ad, чтение статистики (версии v25.0/v17.0 в разных местах кода — не унифицировано)</td></tr>
+            <tr><td>OpenAI (<code>gpt-4o-mini</code>)</td><td>AI-анализ креативов, сводки автопилота — ключ платформы</td></tr>
+            <tr><td>Green API</td><td>WhatsApp-номер на каждую компанию отдельно, вводится вручную в БД</td></tr>
+            <tr><td>n8n (self-hosted)</td><td>оркестрация диалогов WhatsApp AI-менеджера, дёргает backend по internal-key</td></tr>
+            <tr><td>Telegram Bot API</td><td>бот-онбординг, брифинг, отчёты, admin-команды</td></tr>
+            <tr><td>PostgreSQL</td><td>единая база на всё решение</td></tr>
+            <tr><td>JWT</td><td>авторизация веб-панели (не внешний сервис, для полноты)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section id="billing">
+      <span class="section-num">11</span>
+      <h2>Биллинг</h2>
+      <p class="lede">Полностью ручной процесс — платёжного шлюза и автосписаний в коде нет.</p>
+      <ul>
+        <li>AI-менеджер присылает клиенту реквизиты в WhatsApp только после явного согласия платить — это создаёт <code>Sale</code> со статусом <em>Pending</em>;</li>
+        <li>оплату подтверждает человек командой <code>/confirm {id}</code> (или отклоняет <code>/cancel {id}</code>) в Telegram — либо из общего admin-чата, либо из Telegram-чата самой компании;</li>
+        <li>доступ к модулю WhatsApp AI-менеджера для клиента тоже включается вручную (<code>IsPaid</code>) — до этого QR-код на привязку номера не выдаётся.</li>
+      </ul>
+    </section>
+
+    <!-- 12 -->
+    <section id="gaps">
+      <span class="section-num">12</span>
+      <h2>Расхождения и риски — как есть, без прикрас</h2>
+      <p class="lede">Собрано для внутреннего использования — что стоит либо поправить в продукте, либо явно скорректировать в подаче клиентам.</p>
+
+      <h4>Продуктовые несоответствия</h4>
+      <ul>
+        <li><strong>«5 минут и реклама запущена»</strong> — по факту клиент сам снимает видео и сам жмёт «Запустить» в веб-панели после того, как бот отдал сценарий; полноценного end-to-end автозапуска из Telegram нет.</li>
+        <li><strong>Дубль утренних отчётов</strong> — клиенты с автопилотом получают одновременно детальный HTML-отчёт и упрощённый текстовый (§7).</li>
+        <li><strong>Нет ROAS-атрибуции</strong> — Sale из WhatsApp AI-менеджера не связан с конкретной кампанией/объявлением, поэтому оптимизация всё ещё идёт по CPL/CTR, а не по деньгам, которые реально принесла реклама.</li>
+      </ul>
+
+      <h4>Технические риски</h4>
+      <ul>
+        <li><code>SettingsController</code> (CRUD второго автобюджетного движка) не защищён авторизацией вообще;</li>
+        <li>ряд WhatsApp- и Facebook-эндпоинтов не проверяет, что вызывающий действительно владеет указанным <code>companyId</code> — полагается на то, что фронтенд не даёт подставить чужой id;</li>
+        <li><code>appsettings.json</code> / <code>botsettings.json</code> в рабочей копии содержат реальные ключи (OpenAI, Facebook App Secret, Telegram Bot Token, JWT secret, пароль БД) в открытом виде — стоит вынести в secrets/переменные окружения перед тем, как эти файлы попадут в публичный репозиторий;</li>
+        <li>learning phase объявления считается по календарным дням с момента создания, а не по реальному <code>learning_stage</code> из Meta API;</li>
+        <li><code>age_max</code> принудительно ставится в 65 для Advantage+ аудиторий независимо от выбора клиента в брифе — сознательный компромисс охват/точность.</li>
+      </ul>
+    </section>
+
+    <!-- 13 -->
+    <section id="pricing">
+      <span class="section-num">13</span>
+      <h2>Цены одной таблицей</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Этап</th><th>Стоимость</th></tr></thead>
+          <tbody>
+            <tr><td>Подключение (аккаунт + полная настройка)</td><td class="num">100 000 ₸ разово, оплата до начала работ</td></tr>
+            <tr><td>Первый месяц работы</td><td class="num">бесплатно</td></tr>
+            <tr><td>Со 2-го месяца</td><td class="num">25 000 ₸ / месяц</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Срок подключения: 1 день после оплаты, если у клиента уже есть рекламный кабинет Facebook и бизнес-аккаунт Instagram; до 7–10 дней, если нужна верификация Meta с нуля — это зависит от Meta, не от платформы.</p>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    Документ собран по факту чтения кода фронтенда, Telegram-бота и бэкенда — не по маркетинговым материалам. При изменениях в коде разделы 3–8 и 12 стоит перепроверять в первую очередь.
+  </footer>
+
+</div>
+</body>
+</html>
