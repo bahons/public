@@ -1,7 +1,0 @@
-Send-MailMessage `
-  -From "robot@enpf.kz" `
-  -To "b.shymkentbay@enpf.kz" `
-  -Subject "SMTP Test" `
-  -Body "Тестовое письмо без SSL и без авторизации" `
-  -SmtpServer "172.31.0.19" `
-  -Port 25
