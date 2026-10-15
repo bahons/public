@@ -1,11 +1,8 @@
-https://tengrinews.kz/article/27-trillionov-tenge-rasxody-2026-god-razbiraem-kazaxstan-3190/
 
-https://chatgpt.com/g/g-p-6909ddfb29e08191a06bf47c92333bf3-doda-kz/shared/c/690b248c-43e4-8320-9e03-c9a2f25422af?owner_user_id=user-s7SvQLEBFh1qaRnAZbKcNjKa
+https://iqcentr.kz/results.php?sid=88034&sig=0d51c8925e420d0fe51778ed71b2a097470fcb216a119072b6b4b1841cc55ae0
 
 
-https://drive.google.com/file/d/1Ql5gZxcfWDmwUIcNpLF7RicgQKEw8bvJ/view?usp=sharing
 
-https://chatgpt.com/g/g-6a8bf6cee9508191b4282b9664ac7aeb-aitargetologist
 
 
 ## РОЛЬ
